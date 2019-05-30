@@ -1,0 +1,262 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Raleway Thin'), local('Raleway-Thin'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptsg8zYS_SKggPNwE44TYFv.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Raleway ExtraLight'), local('Raleway-ExtraLight'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwOIpWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Raleway Light'), local('Raleway-Light'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwIYqWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptug8zYS_SKggPNyC0ISg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Raleway Medium'), local('Raleway-Medium'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwN4rWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Raleway SemiBold'), local('Raleway-SemiBold'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwPIsWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Raleway Bold'), local('Raleway-Bold'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwJYtWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Raleway ExtraBold'), local('Raleway-ExtraBold'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwIouWqZPBQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Raleway Black'), local('Raleway-Black'), url(https://fonts.gstatic.com/s/raleway/v13/1Ptrg8zYS_SKggPNwK4vWqZPBQ.ttf) format('truetype');
+}
+.hidden {
+  display: none !important;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: auto;
+  background-color: #D7E4ED;
+  font-family: 'Raleway', Arial, sans-serif !important;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0;
+  padding-top: 50px;
+}
+nav.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  margin: 0;
+  background-color: #f44336;
+  border: none;
+  border-radius: 0;
+  z-index: 1000;
+}
+aside.arborescence {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  max-height: 100%;
+  display: inline-block;
+  margin-top: 50px;
+  padding: 0 0 0 32px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  list-style-type: none;
+  background-color: #fff;
+}
+aside.arborescence ul {
+  float: left;
+  margin: 0;
+  padding: 0;
+  padding-left: 16px;
+  list-style-type: none;
+}
+aside.arborescence ul.arborescence-child {
+  display: none;
+}
+aside.arborescence ul[data-type="files"] {
+  display: none !important;
+}
+aside.arborescence ul li {
+  float: left;
+  width: 100%;
+  padding: 4px 0 4px 16px;
+}
+aside.arborescence ul li a {
+  float: left;
+  display: inline-block;
+  width: 100%;
+  color: #000;
+  padding: 4px 12px;
+  transition: color 0.3s linear;
+}
+aside.arborescence ul li a:hover,
+aside.arborescence ul li a:focus,
+aside.arborescence ul li a:active {
+  color: #1a1a1a;
+  text-decoration: none;
+}
+aside.arborescence ul li a:before {
+  font-family: 'Glyphicons Halflings';
+  margin-right: 12px;
+  vertical-align: baseline;
+}
+aside.arborescence ul li a[data-type="folder"] {
+  font-weight: 700;
+}
+aside.arborescence ul li a[data-type="folder"]:before {
+  color: #ffa000;
+  content: '\e117';
+}
+aside.arborescence ul li a[data-type="folder"].is-open:before {
+  content: '\e118';
+}
+aside.arborescence ul li a[data-type="folder"].is-active {
+  background-color: #D7E4ED;
+}
+aside.arborescence ul li a[data-type="file"] {
+  display: none;
+}
+section.viewer {
+  padding: 32px;
+}
+section.viewer div.single {
+  padding: 8px;
+}
+section.viewer div.single div.single-container {
+  padding: 16px 12px 8px 12px;
+  border: 1px solid #bfbfbf;
+  background-color: #fff;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+section.viewer div.single div.single-container.is-active {
+  background-color: #4caf50;
+  color: #fff;
+}
+section.viewer div.single div.single-container.is-active h4.single-name {
+  font-weight: 600;
+}
+section.viewer div.single div.single-container i.single-icon {
+  width: 100%;
+  text-align: center;
+  padding: 8px 8px 16px 8px;
+  font-size: 32px;
+}
+section.viewer div.single div.single-container h4.single-name {
+  width: 80%;
+  margin-left: 10%;
+  text-align: center;
+  font-size: 13px;
+  overflow: hidden;
+  text-wrap: nowrap;
+  text-overflow: ellipsis;
+}
+.new-item {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 384px;
+  padding: 16px;
+  background-color: #fff;
+  transform: translate3D(-50%, -50%, 0) rotateY(90deg);
+  transform-origin: center;
+  perspective: 500px;
+  opacity: 0;
+  z-index: -1;
+  transition-duration: 0.4s;
+  box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.19);
+}
+.new-item.is-active {
+  z-index: 20000;
+  transform: translate3D(-50%, -50%, 0) rotateY(0);
+  opacity: 1;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.new-item .new-item-cancel {
+  position: absolute;
+  top: -8px;
+  right: 6px;
+  font-size: 28px;
+  z-index: 10;
+  cursor: pointer;
+  transition: color 0.4s;
+}
+.new-item .new-item-cancel:hover {
+  color: #f44336;
+}
+.new-item h4 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #bfbfbf;
+  text-transform: uppercase;
+}
+.new-item label[for="filename"] {
+  width: 100%;
+  display: block;
+  margin: 0 12px 8px 0;
+}
+.new-item input[value="file"] {
+  margin-left: 16px;
+}
+.new-item input[name="filename"] {
+  width: 100%;
+  display: block;
+  margin-bottom: 8px;
+}
+.new-item .item-type {
+  margin-top: 8px;
+  padding: 0;
+}
+.new-item button.submit-new-item {
+  display: block;
+  float: right;
+  padding: 4px 12px;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: 600;
+}
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+}

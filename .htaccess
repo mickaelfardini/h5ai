@@ -1,0 +1,14 @@
+#--------------------------------------------------
+# Répertoire : /
+#--------------------------------------------------
+
+RewriteEngine on
+RewriteBase /
+
+#--------------------------------------------------
+# Règles de réécriture d'URL :
+#--------------------------------------------------
+
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /h5ai/index.php [L]
